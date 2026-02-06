@@ -12,6 +12,9 @@ class Settings(BaseSettings):
     ALGORITHM: str = "HS256"
     ACCESS_TOKEN_EXPIRE_MINUTES: int = 30
 
+    # Analyzer
+    LANDMARK_WEIGHTS_PATH: str = "/home/ermakov/webproj/trainModel2/landmark_model.pth"
+
     # App
     APP_NAME: str = "Diploma Backend"
     DEBUG: bool = False

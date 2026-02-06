@@ -4,8 +4,8 @@ from fastapi import FastAPI
 
 from config import settings
 from database import engine, Base
-from models import Item, User  # noqa: F401 - register models before create_all
-from routers import items, auth
+from models import Item, User, Region, Phenotype, FaceFeature  # noqa: F401 - register models before create_all
+from routers import items, auth, analyzer, regions, phenotypes, face_features
 
 
 @asynccontextmanager
@@ -23,6 +23,10 @@ app = FastAPI(
 
 app.include_router(auth.router, prefix="/api")
 app.include_router(items.router, prefix="/api")
+app.include_router(analyzer.router, prefix="/api")
+app.include_router(regions.router, prefix="/api")
+app.include_router(phenotypes.router, prefix="/api")
+app.include_router(face_features.router, prefix="/api")
 
 
 @app.get("/")
