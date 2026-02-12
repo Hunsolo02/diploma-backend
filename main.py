@@ -4,7 +4,7 @@ from fastapi import FastAPI
 
 from config import settings
 from database import engine, Base
-from models import Item, User, Region, Phenotype, FaceFeature, UserProfile  # noqa: F401 - register models
+from models import Item, User, Region, Phenotype, FaceFeature, UserProfile, AnalysisSession, AnalysisQuestion  # noqa: F401 - register models
 from models.user_profile_face_feature import user_profile_face_features  # noqa: F401 - register association table
 from routers import items, auth, analyzer, regions, phenotypes, face_features, user_profiles
 
