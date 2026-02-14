@@ -14,6 +14,7 @@ class Settings(BaseSettings):
 
     # Analyzer
     LANDMARK_WEIGHTS_PATH: str = "/home/ermakov/webproj/trainModel2/landmark_model.pth"
+    PHENOTYPE_WEIGHTS_PATH: str = "analyzer/weights/phenotype_best.pt"
 
     # App
     APP_NAME: str = "Diploma Backend"
